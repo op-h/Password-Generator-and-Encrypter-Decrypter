@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js"></script>  <script src="/final project for js/script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <link rel="stylesheet" href="/final project for js/style.css">
 </head>
 <body>
@@ -68,7 +69,16 @@
         <button onclick="decryptManualPassword()">Decrypt</button>
         <button onclick="copyToClipboard('manualDecryptedPassword')">Copy</button>
     </div>
-</div>
 
+    <h2>Send Data via Email</h2>
+    
+    <div class="input-group">
+        <label for="recipientEmail">Recipient Email:</label>
+        <input type="email" id="recipientEmail" placeholder="Enter recipient email" required>
+    </div>
+    
+    <button onclick="sendEmail()">Send Data via Email</button>
+    <button onclick="resetPage()">Reset</button>
+ </div>
 </body>
 </html>
