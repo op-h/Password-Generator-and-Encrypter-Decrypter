@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js"></script>  <script src="/final project for js/script.js"></script>
+  <link rel="stylesheet" href="/final project for js/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Password Generator and Encrypter/Decrypter</h2>
+    
+    <div class="input-group">
+        <label for="passwordLength">Password Length:</label>
+        <input type="number" id="passwordLength" value="12" min="8" max="32">
+    </div>
+    
+    <div class="input-group">
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+    
+    <div class="input-group">
+        <label for="generatedPassword">Generated Password:</label>
+        <input type="text" id="generatedPassword" readonly>
+        <button onclick="copyToClipboard('generatedPassword')">Copy</button>
+    </div>
+    
+    <div class="input-group">
+        <label for="encryptedPassword">Encrypted Password:</label>
+        <textarea id="encryptedPassword" readonly></textarea>
+        <button onclick="encryptPassword()">Encrypt</button>
+        <button onclick="copyToClipboard('encryptedPassword')">Copy</button>
+    </div>
+    
+    <div class="input-group">
+        <label for="inputEncryptedPassword">Input Encrypted Password:</label>
+        <input type="text" id="inputEncryptedPassword">
+    </div>
+    
+    <div class="input-group">
+        <button onclick="decryptPassword()">Decrypt Password</button>
+    </div>
+    
+    <div class="input-group">
+        <label for="decryptedPassword">Decrypted Password:</label>
+        <input type="text" id="decryptedPassword" readonly>
+        <button onclick="copyToClipboard('decryptedPassword')">Copy</button>
+    </div>
+
+    <h2>Manual Password Encryption/Decryption</h2>
+
+    <div class="input-group">
+        <label for="manualPassword">Enter Password:</label>
+        <input type="text" id="manualPassword">
+    </div>
+    
+    <div class="input-group">
+        <label for="manualEncryptedPassword">Encrypted Password:</label>
+        <textarea id="manualEncryptedPassword" readonly></textarea>
+        <button onclick="encryptManualPassword()">Encrypt</button>
+        <button onclick="copyToClipboard('manualEncryptedPassword')">Copy</button>
+    </div>
+    
+    <div class="input-group">
+        <label for="manualDecryptedPassword">Decrypted Password:</label>
+        <input type="text" id="manualDecryptedPassword" readonly>
+        <button onclick="decryptManualPassword()">Decrypt</button>
+        <button onclick="copyToClipboard('manualDecryptedPassword')">Copy</button>
+    </div>
+</div>
+
+</body>
+</html>
